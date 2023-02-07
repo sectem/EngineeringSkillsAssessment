@@ -17,44 +17,44 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 
 ## Your Breakdown Here
 
-###Ticket 1:
+### Ticket 1:
 
-###Review Schema of Facilities, Agents and Shifts Table
-####Description
+### Review Schema of Facilities, Agents and Shifts Table
+#### Description
 We need to add ability for facilities to save their id with agent to generate report against agent they work with in certain shift.
-####Acceptance Criteria
+#### Acceptance Criteria
 Understanding of current DB tables schema and understanding of logic in working of `getShiftsByFacility` function
-####Estimates
+#### Estimates
 4 hours (1 Point)
-####Implementation
+#### Implementation
 We need to read database models to understand the schema and relationship between tables facilities, agents and shifts.
 We need to understand about the metadata which is included in 'getShiftsByFacility' for better understanding of next implementation.
 
 
-###Ticket 2:
+### Ticket 2:
 
 ### Create a table in database named `ShiftFacilityAgent` where we will store information against shift, facility and agent.
-####Description
+#### Description
 We need to add ability for facilities to save their id with agent to generate report against agent they work with in certain shift.
-####Acceptance Criteria
+#### Acceptance Criteria
 A Database Table containing logic of composite key where we will be able to store the information upon each shift start against any agent for each facility.
-####Estimates
+#### Estimates
 12 hours (3 Points)
-####Implementation
+#### Implementation
 Best and optimized way will be using of composite key in `ShiftFacilityAgent` table. It will be used to identify all the agent that are in the shift uniquely against each row. 
 Each row is combination of over one column and can identify a shift in a certain facility worked by an agent. 
 Upon each shift start we will be inserting data to `ShiftFacilityAgent` table which contains ids of facility, shift, agent and current datetime.
 
-###Ticket 3:
+### Ticket 3:
 
 ### Report generation against agent based on shifts in facility
-####Description
+#### Description
 We need to generate report against Agent worked in client Facilities in a given quarter by summing up every Shift they worked.
-####Acceptance Criteria
+#### Acceptance Criteria
 A report containing each agent record against any facility which includes number of hours worked by an agent in quarter.
-####Estimates
+#### Estimates
 20 hours (5 Points)
-####Implementation
+#### Implementation
 We need to introduce a function `getAgentByFacility` which will be responsible of fetch information based in 
 We will be fetching all entries in `ShiftFacilityAgent` table.
 On each entry we will have a reference of each agent in that shift we will be fetching agent and shift information, we will be getiing number of hours each agent worked.

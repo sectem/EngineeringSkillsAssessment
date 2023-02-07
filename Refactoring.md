@@ -9,16 +9,16 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
-####Renaming Variable
+#### Renaming Variable
 Previously variable name 'event' is creating confusion because at first impression it was looking like its like a
 enentHandler. So renamed the variable name to 'object' clear out that confusion.
 
-####Added null value check
+#### Added null value check
 On line 8: I have addedd !! to make sure the value is there inside the object because of empty object the condition was
 processing below code
 
 
-####Removing extra IF condtion
+#### Removing extra IF condition
 I removed extra "if (candidate)" condition because candidate was undefined at this point and if it was assigned value
 before no need to check it because it will always be undefined
 
